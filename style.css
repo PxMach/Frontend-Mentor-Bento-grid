@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight";
+  grid-auto-columns: 1fr;
+  gap: 20px;
+  width: 700px;
+}
+
+/* Add border to all section */
+section {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Reduce image size  */
+img {
+  width: 140px;
+}
+
+/* manage the first section */
+.reviews {
+  background-color: hsl(256, 67%, 59%);
+  grid-area: one;
+}
+.one {
+  height: 180px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.one h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.one h1 span {
+  color: hsl(39, 100%, 71%);
+}
+.one img {
+  margin-bottom: 10px;
+}
+.one p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.77);
+  margin-bottom: 10px;
+}
+/* manage the second section */
+.platforms {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: two;
+}
+.two {
+  height: 180px;
+  padding: 20px;
+}
+/* manage the third section */
+.schedule {
+  background-color: hsl(39, 100%, 71%);
+  grid-area: three;
+}
+.three {
+  height: 180px;
+  padding: 20px;
+}
+.three h3 {
+  margin-bottom: 10px;
+}
+/* manage the fourth section */
+.post-schedule {
+  background-color: hsl(254, 88%, 90%);
+  grid-area: four;
+}
+.four {
+  width: 180px;
+  padding: 20px;
+}
+.four h3 {
+  margin-bottom: 10px;
+}
+.four img {
+    width: 250px;
+  margin-bottom: 10px;
+}
+.four p {
+  font-size: 13px;
+}
+/* manage the fifth section */
+.grow-followers {
+  background-color: hsl(256, 67%, 59%);
+  grid-area: five;
+}
+.five {
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* manage the sixth section */
+.audience-growth {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: six;
+}
+.six {
+  padding: 20px;
+}
+.six h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.six p {
+  margin-bottom: 20px;
+}
+/* manage the seventh section */
+.create-post {
+  background-color: hsl(31, 66%, 93%);
+  grid-area: seven;
+}
+.seven {
+  padding: 20px;
+}
+.seven h3 {
+  margin-bottom: 20px;
+}
+/* manage the eighth section */
+.ai-content {
+  background-color: hsl(39, 100%, 71%);
+  grid-area: eight;
+}
+.eight {
+  padding: 20px;
+}
+.eight h3 {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+  .content {
+    grid-template-areas:
+      "seven one one four"
+      "seven two three four"
+      "eight two three four"
+      "eight six five five";
+  }
+}
