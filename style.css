@@ -27,12 +27,11 @@ body {
     "eight";
   grid-auto-columns: 1fr;
   gap: 20px;
-  width: 700px;
+  width: 800px;
 }
 
-/* Add border to all section */
 section {
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /* Reduce image size  */
@@ -46,8 +45,8 @@ img {
   grid-area: one;
 }
 .one {
-  height: 180px;
-  padding: 20px;
+  height: 210px;
+  padding: 50px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -75,8 +74,13 @@ img {
   grid-area: two;
 }
 .two {
-  height: 180px;
+  height: 190px;
+  width: 180px;
   padding: 20px;
+  overflow: hidden;
+}
+.two img {
+  width: 200px;
 }
 /* manage the third section */
 .schedule {
@@ -84,8 +88,10 @@ img {
   grid-area: three;
 }
 .three {
-  height: 180px;
+  height: 190px;
+  width: 180px;
   padding: 20px;
+  overflow: hidden;
 }
 .three h3 {
   margin-bottom: 10px;
@@ -96,15 +102,17 @@ img {
   grid-area: four;
 }
 .four {
+  height: 420px;
   width: 180px;
   padding: 20px;
+  overflow: hidden;
 }
 .four h3 {
   margin-bottom: 10px;
 }
 .four img {
-    width: 250px;
-  margin-bottom: 10px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 .four p {
   font-size: 13px;
@@ -115,6 +123,9 @@ img {
   grid-area: five;
 }
 .five {
+  height: 170px;
+  width: 380px;
+  font-size: 20px;
   padding: 20px;
   color: white;
   display: flex;
@@ -127,14 +138,20 @@ img {
   grid-area: six;
 }
 .six {
-  padding: 20px;
+  height: 170px;
+  width: 180px;
+  padding: 10px;
 }
 .six h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 .six p {
+  font-size: 14px;
   margin-bottom: 20px;
+}
+.six img {
+  width: 120px;
 }
 /* manage the seventh section */
 .create-post {
@@ -142,10 +159,15 @@ img {
   grid-area: seven;
 }
 .seven {
-  padding: 20px;
+  /* height: 280px; */
+  padding: 30px;
 }
 .seven h3 {
+  font-size: 24px;
   margin-bottom: 20px;
+}
+.seven h3 span {
+  color: hsl(256, 67%, 59%);
 }
 /* manage the eighth section */
 .ai-content {
@@ -153,18 +175,55 @@ img {
   grid-area: eight;
 }
 .eight {
+  height: 280px;
   padding: 20px;
 }
 .eight h3 {
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   .content {
     grid-template-areas:
       "seven one one four"
       "seven two three four"
       "eight two three four"
       "eight six five five";
+  }
+}
+
+@media (max-width: 499px) {
+  body {
+    height: auto;
+  }
+  .content {
+    display: grid;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six"
+      "seven"
+      "eight";
+  }
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight {
+    height: auto;
+    width: auto;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
